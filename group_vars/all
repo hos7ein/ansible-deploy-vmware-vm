@@ -1,0 +1,32 @@
+---
+# Variables listed here are applicable to all host groups
+
+##### vCenter #####
+vcenter_hostname: "10.10.107.1"
+vcenter_username: "hos7ein@vsphere.local"
+vcenter_password: "MyPas$w0rd"
+datacenter_name: "Datacenter"
+cluster_name: "Cluster"
+folder: "Production-Servers"
+template_name: "Template-CentOS1908"
+vm_name: "VM-web-01"
+virtual_machine_datastore: datastore01
+
+##### networks #####
+
+# vLan 105
+vLan_105_ID: 1105
+IP_105: 10.10.105.43
+netmask_105: 255.255.255.0
+gateway_105: 10.10.105.254
+DNS1: 10.200.100.201
+DNS2: 10.200.100.199
+
+# vLan 104
+vLan_104_ID: 1104
+IP_104: 10.10.104.137
+netmask_104: 255.255.255.0
+
+##### hardware #####
+RAM: 4096  # 4 GB
+CPU: 4     # 4 Core

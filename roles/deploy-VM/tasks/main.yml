@@ -1,0 +1,41 @@
+---
+- name: Deploy VM from {{ template_name }}
+  vmware_guest:
+    hostname: "{{ vcenter_hostname }}"
+    username: "{{ vcenter_username }}"
+    password: "{{ vcenter_password }}"
+    validate_certs: no
+    datacenter: "{{ datacenter_name }}"
+    state: poweredon
+    folder:  /{{ datacenter_name }}/vm/{{ folder }}
+    template: "{{ template_name }}"
+    name: "{{ vm_name }}"
+    cluster: "{{ cluster_name }}"
+    datastore: "{{ virtual_machine_datastore }}"
+    networks:
+      - name: VM Network
+        vlan: "{{ vLan_105_ID }}"
+        ip: "{{ IP_105 }}"
+        netmask: "{{ netmask_105 }}"
+        gateway: "{{ gateway_105 }}"
+        type: static
+      - name: VM Network
+        vlan: "{{ vLan_104_ID }}"
+        ip: "{{ IP_104 }}"
+        netmask: "{{ netmask_104 }}"
+        type: static
+    customization:
+      existing_vm: True
+      hostname: "{{ vm_name }}"
+      dns_servers:
+      - "{{ DNS1 }}"
+      - "{{ DNS2 }}"
+    wait_for_ip_address: yes
+    hardware:
+      memory_mb: "{{ RAM }}"
+      num_cpus: "{{ CPU }}"
+      num_cpu_cores_per_socket: 2
+      hotadd_cpu: True
+      hotremove_cpu: True
+      hotadd_memory: True
+  delegate_to: localhost
