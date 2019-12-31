@@ -47,4 +47,4 @@ ansible-playbook  main-playbook.yml
 
 ## License
 
-ansible-ocserv source code is available under the GPL-3.0 [License](/LICENSE).
+ansible-deploy-vmware-vm source code is available under the GPL-3.0 [License](/LICENSE).
