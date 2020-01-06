@@ -2,7 +2,7 @@ ansible-deploy-vmware-vm
 -------------------
 
 ### Introduction ###
-This Project is Ansible playbook to automate the deployment and configuration of VMs running on VMware vSphere. The `ansible-deploy-vmware-vm` project used Ansible `vmware_guest` module. This module can be used to create new virtual machines from templates or other virtual machines, manage power state of virtual machine such as power on, power off, suspend, shutdown, reboot, restart etc., modify various virtual machine components like network, disk, customization etc., rename a virtual machine and remove a virtual machine with associated components.
+This project is a Ansible playbook to automate the deployment and configuration of VMs running on VMware vSphere. The `ansible-deploy-vmware-vm` project used Ansible `vmware_guest` module. This module can be used to create new virtual machines from templates or other virtual machines, manage power state of virtual machine such as power on, power off, suspend, shutdown, reboot, restart etc., modify various virtual machine components like network, disk, customization etc., rename a virtual machine and remove a virtual machine with associated components.
 
 
 ### Requirements ###
@@ -11,7 +11,7 @@ To use`ansible-deploy-vmware-vm`project you need to some packages for deploying,
 * python >= 2.6
 * PyVmomi
 
-By default Python installed on all linux distributions, but maybe you need to install PyVmomi package. If you use the Fedora/RHEL/CentOS Linux, you can run below command:
+By default Python installed on all linux distributions, but maybe you need to install PyVmomi package. If you use the Fedora / RHEL / CentOS Linux, you can run below command:
 
 ```
 # dnf install python3-pyvmomi
