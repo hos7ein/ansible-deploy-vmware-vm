@@ -6,7 +6,7 @@ This project is a Ansible playbook to automate the deployment and configuration 
 
 
 ### Requirements ###
-To use`ansible-deploy-vmware-vm`project you need to some packages for deploying, in your Ansible machine the below requirements are needed on the host:
+To use`ansible-deploy-vmware-vm`project you need to some packages in your Ansible machine. The requirements are as follows:
 
 * python >= 2.6
 * PyVmomi
